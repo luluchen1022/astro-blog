@@ -1,6 +1,6 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: 'https://luluchen1022.github.io',
-  base: '/astro-blog'
-})
+  site: "https://luluchen1022.github.io",
+  base: "/astro-blog",
+});
