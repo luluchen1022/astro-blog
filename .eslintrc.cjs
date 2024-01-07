@@ -5,7 +5,10 @@ module.exports = {
     "plugin:astro/jsx-a11y-recommended",
     "prettier",
   ],
-  // ...
+  rules: {
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+  },
   overrides: [
     {
       files: ["*.astro"],
@@ -14,7 +17,6 @@ module.exports = {
         parser: "@typescript-eslint/parser",
         extraFileExtensions: [".astro"],
       },
-      rules: {},
     },
   ],
   settings: {
