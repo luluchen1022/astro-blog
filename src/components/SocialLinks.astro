@@ -1,0 +1,33 @@
+---
+import { REPO_NAME } from "@/types/const.ts";
+import Social from "./Social.astro";
+
+const imagePrefixUrl = `${REPO_NAME}/images/platform/`;
+const socialMedias = [
+  {
+    platform: "github",
+    url: "https://github.com/luluchen1022",
+    image: `${imagePrefixUrl}github.png`,
+  },
+  {
+    platform: "shopee",
+    url: "https://shopee.tw/luluchen1022",
+    image: `${imagePrefixUrl}shopee.png`,
+  },
+  {
+    platform: "instagram",
+    url: "https://www.instagram.com/hsingju_chen/",
+    image: `${imagePrefixUrl}instagram.png`,
+  },
+];
+---
+
+<footer>
+  <div class="flex">
+    {
+      socialMedias.map(({ platform, url, image }) => (
+        <Social platform={platform} url={url} image={image} />
+      ))
+    }
+  </div>
+</footer>

@@ -1,0 +1,21 @@
+---
+import Header from "@/components/Header.astro";
+import "@/styles/global.css";
+import { REPO_NAME } from "@/types/const.ts";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href=`${REPO_NAME}/favicon.svg` />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Lulus's blog</title>
+  </head>
+  <body>
+    <Header />
+    <div class="w-auto md:w-2/3 mx-auto">
+      <slot />
+    </div>
+  </body>
+</html>

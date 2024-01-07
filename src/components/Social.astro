@@ -1,0 +1,9 @@
+---
+import { Image } from "astro:assets";
+
+const { url, image, platform } = Astro.props;
+---
+
+<a href={url} class="px-3"
+  ><Image src={image} alt={platform} height={30} width={30} /></a
+>

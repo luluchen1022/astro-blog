@@ -1,0 +1,28 @@
+---
+import { REPO_NAME } from "@/types/const.ts";
+
+const navs = [
+  {
+    href: `${REPO_NAME}`,
+    name: "Home",
+  },
+  {
+    href: `${REPO_NAME}/about`,
+    name: "About",
+  },
+  {
+    href: `${REPO_NAME}/blog`,
+    name: "Blog",
+  },
+];
+---
+
+<div>
+  {
+    navs.map(({ href, name }) => (
+      <a href={href} class="px-5 underline">
+        {name}
+      </a>
+    ))
+  }
+</div>
