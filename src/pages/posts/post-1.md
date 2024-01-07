@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Astro setup"
-pubDate: 2024-01-05
+pubDate: "2024-01-05"
 description: "This is how to use prettier,eslint, and vscode editor setup an astro repo."
 author: "Lulu chen"
 tags: ["astro", "blogging", "learning in public"]

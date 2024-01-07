@@ -1,0 +1,21 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+
+const allPosts = await Astro.glob("../pages/posts/*.md");
+---
+
+<BaseLayout>
+  <div class="grid grid-cols-1 gap-1 md:grid-cols-3">
+    {
+      allPosts.map((post) => (
+        <BlogPost
+          url={post.url}
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+          pubDate={post.frontmatter.pubDate}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>
